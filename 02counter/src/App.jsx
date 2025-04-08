@@ -8,12 +8,19 @@ function App() {
   let [counter,setCounter] = useState(10);
   
   const addValue = () =>{
-    counter = counter+1
+    // counter = counter+1
     if(counter>20){
       counter = 20;
       alert('Highest limit reached')
     }
-    setCounter(counter)
+    setCounter((prevCounter)=>prevCounter+1)
+    setCounter((prevCounter)=>prevCounter+1)
+    setCounter((prevCounter)=>prevCounter+1)
+    setCounter((prevCounter)=>prevCounter+1)
+    // setCounter(counter+1)
+    // setCounter(counter+1)
+    // setCounter(counter+1)
+    // All this will be batched together therefore will run only once
   }
 
   const removeValue = () =>{
